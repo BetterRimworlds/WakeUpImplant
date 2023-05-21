@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<HediffDef Name="addedPartBionicsRib" ParentName="AddedBodyPartBase" Abstract="True">
+		<hediffClass>Hediff_Implant</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+		<priceImpact>true</priceImpact>
+	</HediffDef>
+
+   	<HediffDef ParentName="addedPartBionicsRib">
+		<defName>WakeUpRib</defName>
+		<label>wake-up rib</label>
+		<description>An installed wake-up rib implant.</description>
+		<descriptionHyperlinks><ThingDef>WakeUpRib</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>WakeUpRib</spawnThingOnRemoved>
+		<hediffClass>Hediff_Implant</hediffClass>
+		<stages>
+			<li>
+				<restFallFactor>0.02</restFallFactor>
+                <joyGainFactor>2.0</joyGainFactor>
+				<statOffsets>
+					<MentalBreakThreshold>0.01</MentalBreakThreshold>
+                    <WorkSpeedGlobal>0.6666</WorkSpeedGlobal>
+                    <MeditationFocusGain MayRequire="Ludeon.RimWorld.Royalty">0.2</MeditationFocusGain>
+				</statOffsets>
+				<capMods>
+					<li>
+					  <capacity>Consciousness</capacity>
+					  <offset>0.15</offset>
+					</li>
+                    <li>
+                      <capacity>Moving</capacity>
+                      <offset>0.25</offset>
+                    </li>
+				</capMods>
+			</li>
+        </stages>
+		<tags>
+			<li>WakeUpRib</li>
+		</tags>
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartBionicBase">
+		<defName>WakeUpRib</defName>
+		<label>wake-up rib implant</label>
+		<description>An artificial rib, equipped with little wake-up-dispensers to keep the user awake and focused.</description>
+		<costList>
+			<Plasteel>10</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
+			<Neutroamine>3</Neutroamine>
+			<WakeUp>5</WakeUp>
+		</costList>
+		<statBases>
+			<Mass>0.6</Mass>
+		</statBases>
+	</ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+		<defName>InstallWakeUpRib</defName>
+		<label>install wake-up rib implant</label>
+		<description>Installs a wake-up rib implant.</description>
+		<descriptionHyperlinks>
+			<ThingDef>WakeUpRib</ThingDef>
+			<HediffDef>WakeUpRib</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing a wake-up rib.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WakeUpRib</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WakeUpRib</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Ribcage</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>WakeUpRib</addsHediff>
+		<incompatibleWithHediffTags>
+			<li>WakeUpRib</li>
+			<!--<li>LuciferiumRib</li>-->
+		</incompatibleWithHediffTags>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryRemoveImplantBase">
+		<defName>RemoveWakeUpRib</defName>
+		<label>remove wake-up rib implant</label>
+		<description>Remove a wake-up rib implant.</description>
+		<descriptionHyperlinks>
+			<ThingDef>WakeUpRib</ThingDef>
+			<HediffDef>WakeUpRib</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Removing rib implant.</jobString>
+		<removesHediff>WakeUpRib</removesHediff>
+	</RecipeDef>
+</Defs>
