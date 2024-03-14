@@ -11,3 +11,12 @@ cost. See https://github.com/BetterRimworlds/Rimworld-Stargate
 
 Want your pawns to live forever young and healthy? Check out BetterRimworld's Cryogenesis:
 * https://github.com/BetterRimworlds/CryoRegenesis
+
+## ChangeLog
+
+v1.1.0: 2024-03-14
+* Updated to Rimworld v1.5.
+
+v1.0.0: 2023-05-03
+* Initial release.
+

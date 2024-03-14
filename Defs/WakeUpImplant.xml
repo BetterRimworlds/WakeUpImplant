@@ -17,7 +17,6 @@
 		<stages>
 			<li>
 				<restFallFactor>0.02</restFallFactor>
-                <joyGainFactor>2.0</joyGainFactor>
 				<statOffsets>
 					<MentalBreakThreshold>0.01</MentalBreakThreshold>
                     <WorkSpeedGlobal>0.6666</WorkSpeedGlobal>
