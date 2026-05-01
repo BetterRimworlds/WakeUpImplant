@@ -11,9 +11,16 @@
 			<li>
 				<restFallFactor>0.02</restFallFactor>
 				<statOffsets>
-					<MentalBreakThreshold>0.01</MentalBreakThreshold>
+					<MentalBreakThreshold>0.10</MentalBreakThreshold>
                     <WorkSpeedGlobal>0.6666</WorkSpeedGlobal>
                     <MeditationFocusGain MayRequire="Ludeon.RimWorld.Royalty">0.2</MeditationFocusGain>
+					<!-- Increases the joy rate from meditation, a state of Kel'nor'eem. -->
+					<MeditationJoyGainFactor MayRequire="Ludeon.RimWorld.Royalty">0.5</MeditationJoyGainFactor>
+
+					<JoyGainFactor>0.20</JoyGainFactor>
+
+					<!-- Slows mental break recovery time  -->
+					<MentalBreakRecoveryTime>0.33333</MentalBreakRecoveryTime>
 				</statOffsets>
 				<capMods>
 					<li>
@@ -26,6 +33,7 @@
                     </li>
 				</capMods>
 			</li>
+			<ageTickRateFactor>1.25</ageTickRateFactor>
         </stages>
 		<tags>
 			<li>WakeUpRib</li>
