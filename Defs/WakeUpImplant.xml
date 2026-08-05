@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- ==== Defs/WakeUpImplant.xml ==== -->
 <Defs>
-   	<HediffDef ParentName="addedPartBionicsRib">
+	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>WakeUpRib</defName>
 		<label>wake-up rib</label>
 		<description>An installed wake-up rib implant.</description>
@@ -12,29 +13,29 @@
 				<restFallFactor>0.02</restFallFactor>
 				<statOffsets>
 					<MentalBreakThreshold>0.10</MentalBreakThreshold>
-                    <WorkSpeedGlobal>0.6666</WorkSpeedGlobal>
-                    <MeditationFocusGain MayRequire="Ludeon.RimWorld.Royalty">0.2</MeditationFocusGain>
+					<WorkSpeedGlobal>0.6666</WorkSpeedGlobal>
+					<MeditationFocusGain MayRequire="Ludeon.RimWorld.Royalty">0.2</MeditationFocusGain>
 					<!-- Increases the joy rate from meditation, a state of Kel'nor'eem. -->
 					<MeditationJoyGainFactor MayRequire="Ludeon.RimWorld.Royalty">0.5</MeditationJoyGainFactor>
 
-					<JoyGainFactor>0.20</JoyGainFactor>
+					<!--<JoyGainFactor>0.20</JoyGainFactor>-->
 
 					<!-- Slows mental break recovery time  -->
-					<MentalBreakRecoveryTime>0.33333</MentalBreakRecoveryTime>
+					<!--<MentalBreakRecoveryTime>0.33333</MentalBreakRecoveryTime>-->
 				</statOffsets>
 				<capMods>
 					<li>
-					  <capacity>Consciousness</capacity>
-					  <offset>0.15</offset>
+						<capacity>Consciousness</capacity>
+						<offset>0.15</offset>
 					</li>
-                    <li>
-                      <capacity>Moving</capacity>
-                      <offset>0.25</offset>
-                    </li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.25</offset>
+					</li>
 				</capMods>
 			</li>
-			<ageTickRateFactor>1.25</ageTickRateFactor>
-        </stages>
+		</stages>
+		<!--<ageTickRateFactor>1.25</ageTickRateFactor>-->
 		<tags>
 			<li>WakeUpRib</li>
 		</tags>
@@ -55,7 +56,7 @@
 		</statBases>
 	</ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallImplantBase">
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
 		<defName>InstallWakeUpRib</defName>
 		<label>install wake-up rib implant</label>
 		<description>Installs a wake-up rib implant.</description>
